@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("Note added");
+    console.log(title,detailed);
+
+    setTitle('')
+    setDetailed('')
   };
+
+  const [title, setTitle] = useState('')
+  const [detailed, setDetailed] = useState('')
 
   return (
     <div className="h-screen lg:flex bg-black text-white">
@@ -13,16 +19,29 @@ const App = () => {
         className="flex flex-col lg:w-1/2 items-start gap-4 p-10"
       >
         <h1 className="text-3xl font-bold">Add Notes</h1>
+
+        {/* First input for heading */}
         <input
           type="text"
           placeholder="Enter Notes Heading"
           className="px-5 w-full font-medium py-2 border-2 outline-none rounded"
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
         />
+        {/* Detailed input for heading */}
+
         <textarea
           type="text"
           className="px-5 w-full font-medium h-32 py-2 flex items-start flex-row border-2 outline-none rounded"
           placeholder="Write Details"
+          value={detailed}
+          onChange={(e) => {
+            setDetailed(e.target.value)
+          }}
         ></textarea>
+        
         <button className="bg-white font-medium w-full outline-none text-black px-5 py-2 rounded">
           Add Note
         </button>
