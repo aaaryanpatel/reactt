@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+// once we set an item in localstorage it will be there even if we delete code or restart server 
 
-function App() {
-  const [count, setCount] = useState(0)
+// const age = localStorage.getItem('age')
 
+
+
+// const user = localStorage.getItem('user')
+// console.log(user)
+// console.log(age)
+
+
+// const user =  {
+//   username: 'aryan', 
+//   age: 18,
+//   city:'regina'
+// }
+
+// console.log(user)
+
+// // value should alwasys be in string form
+// // localStorage.setItem('user', user) X
+// localStorage.setItem('user', JSON.stringify(user))
+
+
+// const user = JSON.parse(localStorage.getItem('user'))
+// console.log(user)
+
+
+const user =  {
+  username: 'aryan', 
+  age: 18,
+  city:'reginas'
+}
+
+localStorage.setItem('user', JSON.stringify(user))
+const usera = JSON.parse(localStorage.getItem('user'))
+console.log(user)
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      App
+    </div>
   )
 }
 
 export default App
+App
