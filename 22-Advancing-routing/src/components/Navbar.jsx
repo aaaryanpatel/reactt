@@ -9,6 +9,8 @@ const Navbar = () => {
         <Link className='text-lg font-meduim ' to ='/'>Home</Link>
         <Link className='text-lg font-meduim ' to ='/about'>About</Link>
         <Link className='text-lg font-meduim ' to ='/product'>Product</Link>
+        <Link className='text-lg font-meduim ' to ='/courses'>Courses</Link>
+
 
 
         
