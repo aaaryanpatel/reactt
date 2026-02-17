@@ -8,6 +8,7 @@ import { Route, Routes} from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import Men from './pages/Men'
 import Women from './pages/Women'
+import Kids from './pages/Kids'
 
 const App = () => {
   return (
@@ -17,8 +18,9 @@ const App = () => {
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/product' element={<Product/>}>
-          <Route path='men' element={<Men/>}/>
-          <Route path='women' element={<Women/>}/>
+          <Route path='men' element={<Men/>} />
+          <Route path='women' element={<Women/>} />
+          <Route path='kids' element={<Kids/>} />
 
         </Route>
 
