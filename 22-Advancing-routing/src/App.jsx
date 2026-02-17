@@ -25,7 +25,7 @@ const App = () => {
               will open courses details
             }
         */}
-        <Route path='/courses/:id' element={<CourseDetail/>  } />
+        <Route path='/courses/:courseId' element={<CourseDetail/>  } />
 
         <Route path='/product' element={<Product/>}>
           <Route path='men' element={<Men/>} />
